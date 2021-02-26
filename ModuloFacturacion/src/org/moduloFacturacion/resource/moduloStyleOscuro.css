@@ -1,0 +1,278 @@
+.paneInicio{
+    -fx-background-image: url(../img/inicioClaro.png);
+    -fx-background-size: stretch;
+}
+
+.paneCliente{
+    -fx-background-image: url(../img/usuarioBlanco.png);
+    -fx-background-size: stretch;
+}
+
+.bar{
+    -fx-background-color: #0099CC;
+}
+.paneRegresar{
+     -fx-background-image: url(../img/regresar.png);
+    -fx-background-size: stretch;
+    /*visibility: false;*/
+}
+
+.combo .list-view{
+    -fx-background-color: #2E2E2E;
+    -fx-text-fill: white;
+}
+.comboOscuro:editable .list-view{
+    -fx-background-color: #2E2E2E;
+    -fx-text-fill: white;
+}
+.comboOscuro:editable .list-view .list-cell{
+    -fx-background-color: #2E2E2E;
+    -fx-text-fill: white;
+    
+}
+.comboOscuro:editable .list-view .list-cell:hover{
+    -fx-background-color: #212121;
+    -fx-text-fill: white;
+    
+}
+
+.comboOscuro:editable .list-view .list-cell:selected{
+    -fx-background-color: #212121;
+    -fx-text-fill: white;
+    
+}
+
+.comboOscuro:editable .arrow-button {
+    -fx-background-color: #2E2E2E;
+}
+.comboOscuro:editable .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+.paneBienvenida{
+    -fx-background-color: #2E2E2E;
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 2, 2); 
+}
+.paneRegresar:hover{
+   -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 2, 2);
+    
+}
+.paneRegresar:pressed{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 0, 0);
+}
+
+.paneInicio:hover{
+   -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 2, 2);
+    
+}
+.paneInicio:pressed{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 0, 0);
+}
+
+.paneCliente:hover{
+   -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 2, 2);
+    
+}
+.paneCliente:pressed{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 0, 0);
+}
+
+.tab:hover {
+ -fx-padding: 20px;
+ -fx-cursor: hand;
+}
+
+
+
+.tab-pane:left *.tab-header-area {
+ 
+ -fx-padding: 0;
+}
+.tab-pane:left .tab-header-area .tab-header-background{
+    -fx-background-color: #33b5e5;
+    
+}
+.tabItem{
+    -fx-padding: 15px;
+    -fx-end-margin: 5;
+    -fx-background-color: #0099CC;  
+}
+
+.boton{
+    -fx-background-color: #33b5e5;
+    -fx-cursor: hand;
+}
+
+
+.table-view .column-header{
+    -fx-background-color: #33b5e5;
+}
+
+
+
+.split-pane:horizontal .split-pane-divider{
+    -fx-background-color: #424242;
+}
+
+.label{
+    -fx-text-fill: white;
+}
+
+
+.jfxOscuro{
+     -fx-text-inner-color: white;
+    
+}
+.jfxOscuro .cell{
+    -fx-text-fill: white;
+}
+.anchorOscuro{
+    -fx-background-color: #212121;
+}
+
+.table-view .column-header  .text{
+    -fx-fill: white;
+}
+
+.boton:hover{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 2, 2);
+}
+
+.boton:pressed{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 0, 0);
+}
+
+.paneProveedor{
+    -fx-background-image: url(../img/proveedores.png);
+    -fx-background-size: stretch;
+}
+
+
+.paneProveedor:hover{
+   -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 2, 2);
+    
+}
+.paneProveedor:pressed{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 0, 0);
+}
+
+
+
+.paneCategoria{
+    -fx-background-image: url(../img/categoriaNombre.png);
+    -fx-background-size: stretch;
+}
+
+
+
+.paneProducto{
+    -fx-background-image: url(../img/producto.png);
+    -fx-background-size: stretch;
+}
+
+.paneProducto:hover{
+   -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 2, 2);
+    
+}
+.paneProducto:pressed{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 0, 0);
+}
+
+.combo{
+    
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;
+}
+
+.comboOscuro .list-cell:filled:selected .text{
+    -fx-fill: white;
+    
+}
+.comboOscuro:editable .text-field{
+    -fx-background-color: #2E2E2E;
+    
+}
+
+.jfx-text-field {
+    -fx-text-inner-color: white;
+}
+
+.comboOscuro .text-input{
+    -fx-text-fill: white;
+}
+.comboOscuro:editable .list-view{
+    -fx-background-color: #2E2E2E;
+    -fx-text-fill: white;
+}
+
+.comboOscuro:editable .arrow-button {
+    -fx-background-color: #2E2E2E;
+}
+.comboOscuro:editable .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view:row-selection .table-row-cell:filled:selected { 
+    -fx-background-color: #212121;
+    
+}
+.table-row-cell{
+    -fx-background-color: #3E4551;
+    -fx-border-color: #212121;
+}
+
+.table-view .cell{
+    -fx-border-color: #212121;
+}
+.table-row{
+    -fx-background-color: #3E4551;
+}
+
+.table-view .cell{
+    
+    -fx-text-fill: white;
+    
+}
+.table-view .scroll-bar:horizontal{
+    -fx-background-color: transparent;
+	-fx-border-color:derive( #3E4551,80%);
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+.table-view .scroll-bar:vertical {
+	-fx-background-color: transparent;
+	
+
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+	-fx-background-radius: 2em;
+
+}
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #3E4551,90%);
+	-fx-background-insets: 2, 0, 0;
+	-fx-background-radius: 2em;
+
+}
+
+.combo .list-view{
+    -fx-background-color: #2E2E2E;
+    -fx-text-fill: white;
+}
+
+.combo{
+    
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 0 0 1 0;
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TotalVendio" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fadfd855-3eab-46cb-9d6c-72f351cdbfed">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="FechaCorte" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call SpTotalVendio($P!{FechaCorte});]]>
+	</queryString>
+	<field name="facturaDetalleId" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="facturaFecha" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total Neto Vendido" class="java.math.BigDecimal"/>
+	<field name="Total Iva Vendido" class="java.math.BigDecimal"/>
+	<field name="Total Vendido" class="java.math.BigDecimal"/>
+	<field name="count(distinct f.facturaId)" class="java.lang.Long"/>
+	<field name="sum(fd.cantidad)" class="java.math.BigDecimal"/>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="752" height="38" forecolor="#FFFFFF" backcolor="#1E88E5" uuid="fb9fea1e-d3d0-4621-81ca-e7923d984e21"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="66" y="0" width="163" height="35" uuid="ed2b6767-8aa9-4eb4-a5d9-37183e248914"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL NETO VENDIDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="163" height="35" uuid="709f24d8-9477-46bb-8d5d-29e30b555dca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL IVA VENDIDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="529" y="0" width="163" height="35" uuid="5456031b-e818-4381-a5c1-276950149ada"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL VENDIDO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="5" width="752" height="20" forecolor="#D5D5D5" backcolor="#E7E7E7" uuid="a50d3b80-284c-4a86-84cb-f0074fc03b58"/>
+			</rectangle>
+			<textField>
+				<reportElement x="65" y="4" width="163" height="20" uuid="e2b516e6-e8ed-4fb7-be66-6c0c00f729e0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total Neto Vendido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="529" y="0" width="163" height="25" uuid="34753a23-97f6-49f4-81a4-4c2bae5fbbd1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total Vendido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="163" height="25" uuid="75e77bb6-8b7d-414f-925a-2f545f591966"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total Iva Vendido}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+</jasperReport>

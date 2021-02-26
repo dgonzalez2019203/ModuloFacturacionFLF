@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="510.0" prefWidth="599.0" styleClass="anchorOscuro" stylesheets="@../resource/MenuPrincipalStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.moduloFacturacion.controller.ConsultaPreciosController">
+   <children>
+      <ButtonBar prefHeight="26.0" prefWidth="599.0" styleClass="menubar">
+         <buttons>
+            <JFXButton fx:id="btnCerrar" buttonType="RAISED" minWidth="58.0" onMouseClicked="#btnCerrar" prefHeight="26.0" styleClass="cerrar" text="X" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </buttons>
+      </ButtonBar>
+      <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="CONSULTA DE PRECIOS" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+      <ComboBox fx:id="cmbComboFiltro" editable="true" layoutX="74.0" layoutY="65.0" onAction="#comboFiltro" prefHeight="37.0" prefWidth="354.0" promptText="NOMBRE O CÓDIGO" styleClass="comboOscuro" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="170.80000000000007" AnchorPane.topAnchor="70.0" />
+      <ComboBox fx:id="cmbBuscar" editable="true" layoutX="74.0" layoutY="122.0" onAction="#cmbBuscar" prefHeight="38.0" prefWidth="354.0" promptText="INGRESE EL VALOR A BUSCAR" styleClass="comboOscuro" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="170.80000000000007" AnchorPane.topAnchor="122.0" />
+      <Button fx:id="btnBuscarProducto" layoutX="456.0" layoutY="122.0" mnemonicParsing="false" onMouseClicked="#btnBuscarProducto" prefHeight="38.0" prefWidth="89.0" styleClass="boton" text="BUSCAR" textFill="WHITE" AnchorPane.rightAnchor="53.60000000000005" AnchorPane.topAnchor="122.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="74.0" layoutY="176.0" prefHeight="38.0" prefWidth="75.0" text="CÓDIGO:" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="176.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCodigoProducto" editable="false" layoutX="70.0" layoutY="214.0" prefHeight="38.0" prefWidth="476.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="53.200000000000045" AnchorPane.topAnchor="214.0" />
+      <Label layoutX="74.0" layoutY="265.0" prefHeight="38.0" prefWidth="216.0" text="NOMBRE DEL PRODUCTO:" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="265.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtNombreProducto" editable="false" layoutX="70.0" layoutY="303.0" prefHeight="38.0" prefWidth="476.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="53.200000000000045" AnchorPane.topAnchor="303.0" />
+      <Label layoutX="76.0" layoutY="353.0" prefHeight="38.0" prefWidth="193.0" text="PRECIO DEL PRODUCTO:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtPrecioProducto" editable="false" layoutX="72.0" layoutY="391.0" prefHeight="38.0" prefWidth="476.0" />
+   </children>
+</AnchorPane>

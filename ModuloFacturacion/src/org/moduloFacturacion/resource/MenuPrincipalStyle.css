@@ -1,0 +1,123 @@
+.tab-pane:left .tab-header-area .headers-region .tab:left{
+    -fx-background-image: url("../img/usuario.png");
+    
+}
+
+.cerrar:hover{
+    -fx-background-color: #CC0000;
+}
+.menu{
+    -fx-background-color: #0099CC;
+    
+}
+.menu, .menu-item, .context-menu {
+    -fx-background-color: #0099CC;
+    -fx-cursor: hand;
+}
+.combo{
+    
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;
+}
+
+.menubar{
+    -fx-background-color: #0099CC;
+    
+    
+}
+.menu-item:hover{
+    -fx-font-size:16px;
+    -fx-background-color: #33b5e5;
+}
+
+.menubar .container .label .text{
+    -fx-fill: white;
+    -fx-font-family: Arial;
+}
+
+.tabItem{
+    -fx-padding: 15px;
+    -fx-end-margin: 5;
+    -fx-background-color: #2E2E2E;  
+}
+
+.tab-pane:left .tab-header-area .tab-header-background{
+    -fx-background-color: #212121;
+    
+}
+
+
+
+
+.paneCliente{
+    -fx-background-image: url(../img/cliente.png);
+    -fx-background-size: stretch;
+    
+}
+
+
+.tab:hover {
+ -fx-padding: 20px;
+ -fx-cursor: hand;
+}
+
+
+
+.tab-pane:left *.tab-header-area {
+ 
+ -fx-padding: 0;
+}
+
+.opciones:hover{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 7, 7); 
+    -fx-cursor: hand;
+}
+
+.opciones:pressed{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 0, 0);
+}
+
+.paneBienvenida{
+    -fx-background-color: whitesmoke;
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 2, 2); 
+}
+
+.panelBienvenida1{
+    -fx-background-image: url(../img/cesped.png);
+    -fx-background-repeat: stretch;
+    -fx-background-size: 1500 100;
+}
+
+.boton{
+    -fx-background-color: #33b5e5;
+    -fx-cursor: hand;
+}
+
+.table-view .column-header{
+    -fx-background-color: #212121;
+}
+
+.table-view .column-header  .text{
+    -fx-fill: white;
+}
+
+.boton:hover{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 2, 2);
+}
+
+.boton:pressed{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 0, 0);
+}
+
+.off{    
+    -fx-cursor: hand;
+}
+
+.on{
+    visibility: false;
+}
+.paneMode{
+    -fx-background-color: #eee;
+    
+}

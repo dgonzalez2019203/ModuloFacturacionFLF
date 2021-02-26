@@ -1,0 +1,240 @@
+.tab-pane:left .tab-header-area .headers-region .tab:left{
+    -fx-background-image: url("../img/usuario.png");
+    
+}
+
+.cerrar:hover{
+    -fx-background-color: #CC0000;
+}
+.menu{
+    -fx-background-color: #0099CC;
+    
+}
+.menu, .menu-item, .context-menu {
+    -fx-background-color: #0099CC;
+    -fx-cursor: hand;
+}
+.combo{
+    
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 0 0 1 0;
+}
+
+.menubar{
+    -fx-background-color: #0099CC;
+    
+    
+}
+.menu-item:hover{
+    -fx-font-size:16px;
+    -fx-background-color: #33b5e5;
+}
+
+.menubar .container .label .text{
+    -fx-fill: white;
+    -fx-font-family: Arial;
+}
+.split-pane:horizontal .split-pane-divider{
+    -fx-background-color: #424242;
+}
+
+.tabItem{
+    -fx-padding: 15px;
+    -fx-end-margin: 5;
+    -fx-background-color: #0099CC;  
+}
+
+.tab-pane:left .tab-header-area .tab-header-background{
+    -fx-background-color: #33b5e5;
+    
+}
+
+
+
+
+.paneCliente{
+    -fx-background-image: url(../img/cliente.png);
+    -fx-background-size: stretch;
+    
+}
+
+
+.tab:hover {
+ -fx-padding: 20px;
+ -fx-cursor: hand;
+}
+
+
+
+.tab-pane:left *.tab-header-area {
+ 
+ -fx-padding: 0;
+}
+
+.opciones:hover{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 7, 7); 
+    -fx-cursor: hand;
+}
+
+.opciones:pressed{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 0, 0);
+}
+
+.paneBienvenida{
+    -fx-background-color: #2E2E2E;
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 2, 2); 
+}
+
+.panelBienvenida1{
+    -fx-background-image: url(../img/cesped.png);
+    -fx-background-repeat: stretch;
+    -fx-background-size: 1500 100;
+}
+
+.label{
+    -fx-text-fill: white;
+}
+
+.boton{
+    -fx-background-color: #33b5e5;
+    -fx-cursor: hand;
+}
+
+.table-view .column-header{
+    -fx-background-color: #0099CC;
+}
+.anchorOscuro{
+    -fx-background-color: #212121;
+}
+.table-view .column-header  .text{
+    -fx-fill: white;
+}
+
+.boton:hover{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 2, 2);
+}
+
+.boton:pressed{
+    -fx-effect: dropshadow(three-pass-box, derive(black, -10%), 10, 0, 0, 0);
+}
+
+.comboOscuro:editable .text-field{
+    -fx-background-color: #2E2E2E;
+    
+}
+
+.comboOscuro .text-input{
+    -fx-text-fill: white;
+    
+}
+
+
+.jfx-text-field {
+    -fx-text-inner-color: white;
+}
+.jfx-password-field{
+    -fx-text-inner-color: white;
+}
+
+.combo .list-view{
+    -fx-background-color: #2E2E2E;
+    -fx-text-fill: white;
+}
+.comboOscuro:editable .list-view{
+    -fx-background-color: #2E2E2E;
+    -fx-text-fill: white;
+}
+.comboOscuro:editable .list-view .list-cell{
+    -fx-background-color: #2E2E2E;
+    -fx-text-fill: white;
+    
+}
+.comboOscuro:editable .list-view .list-cell:hover{
+    -fx-background-color: #212121;
+    -fx-text-fill: white;
+    
+}
+
+.comboOscuro:editable .list-view .list-cell:selected{
+    -fx-background-color: #212121;
+    -fx-text-fill: white;
+    
+}
+
+.comboOscuro:editable .arrow-button {
+    -fx-background-color: #2E2E2E;
+}
+.comboOscuro:editable .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view:row-selection .table-row-cell:filled:selected { 
+    -fx-background-color: #212121;
+    
+}
+.table-row-cell{
+    -fx-background-color: #3E4551;
+    -fx-border-color: #212121;
+}
+
+.table-view .cell{
+    -fx-border-color: #212121;
+}
+.table-row{
+    -fx-background-color: #3E4551;
+}
+
+.table-view .cell{
+    
+    -fx-text-fill: white;
+    
+}
+.table-view .scroll-bar:horizontal{
+    -fx-background-color: transparent;
+	-fx-border-color:derive( #3E4551,80%);
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+.table-view .scroll-bar:vertical {
+	-fx-background-color: transparent;
+	
+
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+	-fx-background-radius: 2em;
+
+}
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #3E4551,90%);
+	-fx-background-insets: 2, 0, 0;
+	-fx-background-radius: 2em;
+
+}
+
+
+.off{    
+    visibility: false;
+}
+
+.on{
+    -fx-cursor: hand;
+    -fx-background-color: #33b5e5;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+.paneMode{
+    -fx-background-color: #2E2E2E;
+}
+
+.check{
+    -fx-text-fill: white;
+}

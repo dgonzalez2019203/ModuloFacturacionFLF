@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CierreDeCaja" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="0bd975ad-d6e5-421c-aa44-5ce81356ac7e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="513"/>
+	<parameter name="FechaCorte" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:/Program Files (x86)/ModuloFacturacion/ModuloFacturacion/rep/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="imagesDir" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[call SpCorteDeCaja($P!{FechaCorte});]]>
+	</queryString>
+	<field name="facturaId" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="clienteNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="clienteNit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="facturaFecha" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="usuarioNombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="facturaTotalNeto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="facturaTotalIva" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="facturaTotal" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="572" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement isPrintRepeatedValues="false" x="0" y="372" width="752" height="200" uuid="22213afe-69b2-43f3-ba7c-e59dfeddb42a">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}.intValue() > 0]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Program Files (x86)/ModuloFacturacion/ModuloFacturacion/rep/fondo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="16" y="549" width="130" height="22" uuid="6299c248-b01f-46af-9d54-b3fbd8ed089a"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[© PROGRAMMERS CREW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="547" width="748" height="11" uuid="67ef7f26-8828-400a-acbf-847ff9bf07ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA["Este reporte es estrictamente para uso administrativo.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="558" width="752" height="11" uuid="00aca2cc-3c12-460f-a5e0-c16a3756bd9f"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Esta completamente prohibido revelar esta informacion al publico general"]]></text>
+			</staticText>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="236" y="0" width="266" height="79" uuid="3532f7b1-ccd5-4e2c-97f2-d2eb25a14e59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bell MT" size="30" isBold="true" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CIERRE DE CAJA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="0" width="69" height="79" uuid="a68da3b6-76bc-4701-9f51-c095c445b4fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[LOGO EMPRESA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="145" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="643" y="0" width="100" height="20" uuid="520112ba-f8d5-48ec-b6b2-135c5e0be0a0"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="0" width="51" height="20" uuid="abc23875-a5b1-4dc9-b244-591c9e8d7d0a"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA:   ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="627" y="0" width="16" height="20" uuid="f400a3db-8830-407c-9392-7c266ce106a5"/>
+			</line>
+			<textField>
+				<reportElement x="74" y="0" width="100" height="20" uuid="1805cc0e-2e9a-4f1e-93b1-ad81631232f9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FechaCorte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="527" y="0" width="100" height="20" uuid="765f26b2-55cb-41a2-9030-7d0b116e654d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="0" y="33" width="712" height="100" isRemoveLineWhenBlank="true" uuid="7281dcdf-24cf-4317-afb7-2f76d49b303a">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}.intValue() == 1]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="FechaCorte">
+					<subreportParameterExpression><![CDATA[$P{FechaCorte}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "TotalVendio.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="3" width="752" height="24" forecolor="#1E88E5" backcolor="#42A5F5" uuid="14be8e88-238f-4074-ad10-8d07525019e0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="605" y="6" width="120" height="24" uuid="86897925-0e80-4930-b6aa-67dd30266475"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL FACTURA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="3" width="120" height="27" uuid="ceea6cfa-c063-48b2-93f2-8289dcdd42c2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="6" width="120" height="24" uuid="21d6dcaa-cc64-4d5a-acc6-ddbd5ef16225"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NUMERO FACTURA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="6" width="120" height="24" uuid="f6f87970-e917-4356-86a7-b6347866efce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[USUARIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="3" width="120" height="27" uuid="c2531d1a-70c7-48b8-8c62-da3cb6359f48"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="10" width="120" height="23" uuid="6917eb1b-0afe-41e7-8f56-8c4555f4d221"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{usuarioNombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="10" width="120" height="23" uuid="5f160c2c-eb20-4dd8-ba45-89ab29138000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clienteNit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="10" width="120" height="23" uuid="a16ceefe-fd10-404c-9f5f-299fe806eead"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clienteNombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="10" width="120" height="23" uuid="96076615-6c5c-4600-9f3f-59c5ed586a3d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facturaId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="605" y="10" width="138" height="23" uuid="059dbbe3-2d4a-49e0-969a-75a65f1098db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facturaTotal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="54"/>
+	</lastPageFooter>
+	<summary>
+		<band height="48"/>
+	</summary>
+</jasperReport>
